@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./popup.css">
+</head>
+
+<body>
+
+  <h2>Modal Example</h2>
+
+  <button id="exitBtn" onclick="openModal()">CLick to open exit Intent popup</button>
+
+  <div id="exitModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="flex">
+        <form class="form" id="form">
+          <div class="col-75">
+            <h2>GET $10 OFF WHEN SIGNUP FOR <span
+                style="text-decoration: none; font-weight: normal; overflow-wrap: break-word;">SAVINGS, NEWS, UPDATES
+                AND MORE</span></h2>
+          </div>
+          <div class="col-75"><input type="text" id="name" placeholder="your name" onkeydown="onChangeHandler('name')">
+            <p id="error-name" class="error">Please enter valid name</p>
+          </div>
+          <div class="col-75"><input type="email" id="email" placeholder="email address"
+              onkeydown="onChangeHandler('email')">
+            <p id="error-email" class="error">Please enter valid email address</p>
+          </div>
+          <div class="col-75"><input type="checkbox" id="newsletter" onchange="onChangeHandler('newsletter')">
+          <label for="newsletter">Check this box to receive monthy newsletter.</label><br></div>
+          <div id="error-message" style="color: red; display: none;">Please check the checkbox to proceed.</div>
+
+          <div class="col-75"><input type="button" value="SIGN UP" onclick="ValidateForm()"></div>
+          <center><a href="./" class="privacy_policy">PRIVACY POLICY</a></center>
+
+        </form>
+        <img src="./sale.png" alt="big-christmas-sale">
+      </div>
+    </div>
+
+  </div>
+  <script src="./popup.js"></script>
+
+</body>
+
+</html>
